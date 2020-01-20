@@ -38,7 +38,7 @@ Public Class Form1
 
         If Not String.IsNullOrWhiteSpace(ListBox1.SelectedItem) Then
             Try
-                tamanhoNormaldoForm()
+                'tamanhoNormaldoForm()
                 Dim url As String = ListBox1.SelectedItem
                 Dim qrencod As New QRCodeEncoder()
                 Dim qrcode As Bitmap = qrencod.Encode(url)
