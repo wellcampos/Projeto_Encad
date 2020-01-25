@@ -2,6 +2,7 @@
 Imports MySql.Data.MySqlClient
 Imports MessagingToolkit.QRCode.Codec
 Imports MessagingToolkit.QRCode.Codec.Data
+
 Public Class Form1
     Dim stringConexao As String = ConfigurationManager.ConnectionStrings(“ConexaoMySql”).ConnectionString()
     Dim conexaoMySql As MySqlConnection
@@ -49,5 +50,20 @@ Public Class Form1
         Else
             MessageBox.Show("Informe uma texto para gerar o QRCode", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+    End Sub
+
+    Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
+        picImagem.Width = picImagem.Image.Width + 2
+
+        picImagem.Height = picImagem.Image.Height + 2
+
+        ' imprime a imagem
+
+        PrintDocument1.Print()
+
+    End Sub
+    Private Sub PrintDocument1_PrintPage_1(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Dim Rect As New Rectangle(20, 20, picImagem.Width, picImagem.Height)
+        e.Graphics.DrawImage(picImagem.Image, Rect)
     End Sub
 End Class

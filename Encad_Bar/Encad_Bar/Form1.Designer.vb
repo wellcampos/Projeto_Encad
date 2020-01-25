@@ -26,6 +26,8 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.picImagem = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         CType(Me.picImagem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,11 +65,24 @@ Partial Class Form1
         Me.Button2.Text = "Gerar QrCode"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'btnImprimir
+        '
+        Me.btnImprimir.Location = New System.Drawing.Point(261, 236)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(75, 23)
+        Me.btnImprimir.TabIndex = 4
+        Me.btnImprimir.Text = "Imprimir"
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
+        'PrintDocument1
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(750, 330)
+        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.picImagem)
         Me.Controls.Add(Me.Button1)
@@ -83,4 +98,6 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents picImagem As PictureBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents btnImprimir As Button
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
 End Class
