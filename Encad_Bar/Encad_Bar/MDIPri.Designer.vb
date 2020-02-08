@@ -48,8 +48,7 @@ Partial Class MDIPri
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewMenu = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StatusBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.optMRelatorio = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.optMNovasObras = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -79,6 +78,7 @@ Partial Class MDIPri
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.optMObrasAberto = New System.Windows.Forms.ToolStripMenuItem()
         Me.optMDetalhesObra = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -250,28 +250,19 @@ Partial Class MDIPri
         '
         'ViewMenu
         '
-        Me.ViewMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolBarToolStripMenuItem, Me.StatusBarToolStripMenuItem})
+        Me.ViewMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.optMRelatorio, Me.ToolStripMenuItem1})
         Me.ViewMenu.Name = "ViewMenu"
-        Me.ViewMenu.Size = New System.Drawing.Size(47, 20)
-        Me.ViewMenu.Text = "E&xibir"
+        Me.ViewMenu.Size = New System.Drawing.Size(73, 20)
+        Me.ViewMenu.Text = "&Impressão"
         '
-        'ToolBarToolStripMenuItem
+        'optMRelatorio
         '
-        Me.ToolBarToolStripMenuItem.Checked = True
-        Me.ToolBarToolStripMenuItem.CheckOnClick = True
-        Me.ToolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ToolBarToolStripMenuItem.Name = "ToolBarToolStripMenuItem"
-        Me.ToolBarToolStripMenuItem.Size = New System.Drawing.Size(185, 22)
-        Me.ToolBarToolStripMenuItem.Text = "&Barra de Ferramentas"
-        '
-        'StatusBarToolStripMenuItem
-        '
-        Me.StatusBarToolStripMenuItem.Checked = True
-        Me.StatusBarToolStripMenuItem.CheckOnClick = True
-        Me.StatusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.StatusBarToolStripMenuItem.Name = "StatusBarToolStripMenuItem"
-        Me.StatusBarToolStripMenuItem.Size = New System.Drawing.Size(185, 22)
-        Me.StatusBarToolStripMenuItem.Text = "Barra de &Status"
+        Me.optMRelatorio.Checked = True
+        Me.optMRelatorio.CheckOnClick = True
+        Me.optMRelatorio.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.optMRelatorio.Name = "optMRelatorio"
+        Me.optMRelatorio.Size = New System.Drawing.Size(190, 22)
+        Me.optMRelatorio.Text = "&Relatórios"
         '
         'ToolsMenu
         '
@@ -470,6 +461,12 @@ Partial Class MDIPri
         Me.optMDetalhesObra.Size = New System.Drawing.Size(243, 22)
         Me.optMDetalhesObra.Text = "&Detalhes de obras"
         '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(190, 22)
+        Me.ToolStripMenuItem1.Text = "Impressões Agendada"
+        '
         'MDIPri
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -541,9 +538,9 @@ Partial Class MDIPri
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents SelectAllToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ViewMenu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolBarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents StatusBarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents optMRelatorio As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolsMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents optMObrasAberto As ToolStripMenuItem
     Friend WithEvents optMDetalhesObra As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class
