@@ -26,6 +26,9 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.picImagem = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.picImagem, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,11 +66,34 @@ Partial Class Form1
         Me.Button2.Text = "Gerar QrCode"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'PrintDocument1
+        '
+        '
+        'btnImprimir
+        '
+        Me.btnImprimir.Location = New System.Drawing.Point(232, 238)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(75, 23)
+        Me.btnImprimir.TabIndex = 4
+        Me.btnImprimir.Text = "Imprimir"
+        Me.btnImprimir.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(551, 240)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 5
+        Me.Button3.Text = "Lista Pecas"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(750, 330)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnImprimir)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.picImagem)
         Me.Controls.Add(Me.Button1)
@@ -83,4 +109,7 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents picImagem As PictureBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents btnImprimir As Button
+    Friend WithEvents Button3 As Button
 End Class
