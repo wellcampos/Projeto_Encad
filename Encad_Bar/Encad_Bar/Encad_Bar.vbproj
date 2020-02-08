@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{23DA6192-EFE3-4951-BF6C-C77DB65DCAC1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Encad_Bar.My.MyApplication</StartupObject>
+    <StartupObject>Encad_Bar.MDIPri</StartupObject>
     <RootNamespace>Encad_Bar</RootNamespace>
     <AssemblyName>Encad_Bar</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -121,6 +121,12 @@
     <Compile Include="FrmDB.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MDIPri.Designer.vb">
+      <DependentUpon>MDIPri.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDIPri.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDB.resx">
       <DependentUpon>FrmDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIPri.resx">
+      <DependentUpon>MDIPri.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
