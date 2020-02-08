@@ -60,7 +60,7 @@ Public Class DimPecas
                 'tamanhoNormaldoForm()
                 Dim url As String = code
                 Dim qrencod As New QRCodeEncoder()
-                Dim qrcode As Bitmap = qrencod.Encode(url).SetResolution(30, 30)
+                Dim qrcode As Bitmap = qrencod.Encode(url)
                 picImagem.Image = TryCast(qrcode, Image)
             Catch ex As Exception
                 MessageBox.Show("Erro : " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error)
